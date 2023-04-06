@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DatePicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="LxV-Ro-p0V">
+                                <rect key="frame" x="41.5" y="94" width="331" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="sh5-Yk-2fa"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="compact"/>
+                                    <segment title="inline"/>
+                                    <segment title="wheels"/>
+                                </segments>
+                                <connections>
+                                    <action selector="btnSegTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="elv-nq-jid"/>
+                                </connections>
+                            </segmentedControl>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="jvX-j9-ypH">
+                                <rect key="frame" x="16" y="184" width="382" height="386.5"/>
+                                <color key="backgroundColor" red="0.97779065793004249" green="1" blue="0.73124016924716284" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6GT-Qq-rrC">
+                                <rect key="frame" x="185.5" y="751" width="43.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="jvX-j9-ypH" secondAttribute="trailing" constant="16" id="2ZD-cS-Bjt"/>
+                            <constraint firstItem="6GT-Qq-rrC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9hG-jb-56o"/>
+                            <constraint firstItem="LxV-Ro-p0V" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="Uev-6d-D9R"/>
+                            <constraint firstItem="jvX-j9-ypH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Vfc-gv-HH3"/>
+                            <constraint firstItem="LxV-Ro-p0V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZEW-Gk-meZ"/>
+                            <constraint firstItem="LxV-Ro-p0V" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="eFD-BX-S0D"/>
+                            <constraint firstItem="jvX-j9-ypH" firstAttribute="top" secondItem="LxV-Ro-p0V" secondAttribute="bottom" constant="50" id="xCw-Vn-OhV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6GT-Qq-rrC" secondAttribute="bottom" constant="90" id="yDS-ye-i5o"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dateLbl" destination="6GT-Qq-rrC" id="kAG-Uq-NHO"/>
+                        <outlet property="datePicker" destination="jvX-j9-ypH" id="ksI-tl-q2E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="35.491071428571423"/>
+        </scene>
+    </scenes>
+</document>
